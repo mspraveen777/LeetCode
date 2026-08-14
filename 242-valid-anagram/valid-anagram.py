@@ -17,10 +17,7 @@ class Solution:
                     hash_dict2[ch] = 1
 
 
-        if hash_dict1 == hash_dict2:
-            return True
-        else:
-            return False
+        return hash_dict1 == hash_dict2
     
 
         
