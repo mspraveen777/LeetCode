@@ -1,17 +1,17 @@
 class Solution:
     def findContentChildren(self, g: list[int], s: list[int]) -> int:
-        n = len(g)
-        m = len(s)
         g.sort()
         s.sort()
-        left = 0 
+        left = 0
         right = 0
+        n = len(g)
+        m = len(s)
         count = 0
-
         while left < n and right < m:
-            if g[left] <= s[right]:
-                count += 1
-                left +=1
-            right +=1
+            if s[right] >= g[left]:
+                count += 1 
+                left+=1
+            right+=1
         return count
+
         
